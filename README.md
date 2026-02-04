@@ -70,3 +70,8 @@ If you use DistServe for your research, please cite our [paper](https://arxiv.or
       primaryClass={cs.DC}
 }
 ```
+cat > SwiftTransformer/build/lib/empty.c << 'EOF'
+void __distserve_stub__() {}
+EOF
+
+gcc -shared -fPIC empty.c -o SwiftTransformer/build/lib/libst_pybinding.so
