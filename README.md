@@ -25,6 +25,12 @@ conda env create -f environment.yml && conda activate distserve
 
 # clone and build the SwiftTransformer library  
 git clone https://github.com/LLMServe/SwiftTransformer.git && cd SwiftTransformer && git submodule update --init --recursive
+cmake -B build \
+  -DCMAKE_CUDA_COMPILER=OFF \
+  -DCMAKE_DISABLE_FIND_PACKAGE_CUDA=ON \
+  -DUSE_CUDA=OFF \
+  -DENABLE_CUDA=OFF
+
 cmake -B build && cmake --build build -j$(nproc)
 cd ..
 
