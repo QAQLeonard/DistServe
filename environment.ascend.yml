@@ -1,0 +1,45 @@
+name: distserve
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  - python=3.10
+  - pip
+  - numpy
+  - scipy
+  - pyyaml
+  - tqdm
+  - psutil
+  - networkx
+  - filelock
+  - jinja2
+  - sympy
+  - packaging
+  - typing_extensions
+  - yaml
+  - openssl
+  - ca-certificates
+  - setuptools
+  - wheel
+
+  - pip:
+      - torch
+      - torchvision
+      - torchaudio
+
+      - ray==2.10.0
+      - fastapi==0.110.1
+      - uvicorn==0.29.0
+
+      - transformers==4.39.3
+      - tokenizers==0.15.2
+      - safetensors==0.4.3
+      - huggingface-hub==0.22.2
+
+      - aiohttp==3.9.5
+      - aiohttp-cors==0.7.0
+      - prometheus-client==0.20.0
+
+      - pandas==2.2.2
+      - py-spy==0.3.14
